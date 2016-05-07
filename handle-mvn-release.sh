@@ -20,7 +20,7 @@ if [[ -v MVN_RELEASE_VER ]]; then
                  -DreleaseVersion=${MVN_RELEASE_VER} \
                  -DdevelopmentVersion=${MVN_RELEASE_DEV_VER}
 
-    mvn -s settings.xml release:perform
+    mvn -B -s settings.xml release:perform
 
     mvn release:clean
 fi
