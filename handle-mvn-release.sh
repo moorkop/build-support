@@ -9,6 +9,7 @@ if [[ -v MVN_RELEASE_VER ]]; then
     check_var MVN_RELEASE_DEV_VER
     check_var MVN_RELEASE_USER_EMAIL
     check_var MVN_RELEASE_USER_NAME
+    resolve_vars
 
     set -e
 
