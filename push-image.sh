@@ -6,7 +6,7 @@ OUR_DIR=$(dirname $_)
 echo "Pushing image"
 echo "Repo path: ${DOCKER_REPO_PATH}"
 echo "Module: ${OUR_MODULE:=$(basename $PWD)}"
-echo "Tag: ${IMAGE_TAG:=$CIRCLE_BRANCH}"
+echo "Tag: ${IMAGE_TAG:=${CIRCLE_BRANCH:-${CIRCLE_TAG}}}"
 
 check_var DOCKER_EMAIL
 check_var DOCKER_REPO_USER
